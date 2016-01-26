@@ -1,0 +1,32 @@
+
+public class Fibonacci {
+	public static void main(String[] args) {
+
+		int i = 0;
+		int j = 0;
+		int x = 1;
+		int y = x + x;
+		i = y;
+		System.out.println(x);
+		System.out.println(y);
+		while(x < 4000000 && y < 4000000){
+			
+			x = y + x;
+			if(x< 4000000 & x % 2 == 0){
+			System.out.println(x);
+			i +=x;
+			}
+
+			y = x + y;
+			if(y< 4000000 & y % 2 == 0){
+			System.out.println(y);
+			j += y;
+			}
+
+		}
+		System.out.println("x is " + i);
+		System.out.println("y is " + j);
+		System.out.println(i + j);
+	}
+
+}
