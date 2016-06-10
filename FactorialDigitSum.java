@@ -10,7 +10,7 @@ public class FactorialDigitSum {
 		System.out.print("Enter number: ");
 		double n = sc.nextDouble();
 		double x = 1;
-		double y = 0;
+		double y = 1;
 		
 		for(double i = n;i > 1;i --){
 				x=(x*i);
@@ -18,11 +18,16 @@ public class FactorialDigitSum {
 
 		}
 		String s = String.valueOf(x);
-		String [] stuff = s.split("");
+		int [] intArray = new int[s.length()];
 		
-		for (int i = 0; i < stuff.length; i++) {
-			y += i;
+		for(int i = 0; i < s.length(); i ++){
+			intArray[i] = Character.digit(s.charAt(i),10);
+			System.out.println(s.charAt(i));
+			y += intArray[i];
 		}
 		System.out.println(y);
+
+		
+		//System.out.println(y);
 	}
 }
